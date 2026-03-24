@@ -7,7 +7,7 @@ Team Members
 - Qhubekani (Team Leader / GitHub Manager)
   -Avuyile Twesha
   -LuckySnazo
-  -Peninne
+  -Alphonsine
   -Siv
 
  Technologies Used
