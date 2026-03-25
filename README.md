@@ -6,7 +6,7 @@ This project is a Car Rental System developed using Java and Maven.
 Team Members
 - Qhubekani (Team Leader / GitHub Manager)
   -Avuyile Twesha
-  -Lucky Twala
+  -LuckySnazo
   -Peninne
   -Siv
 

@@ -1,12 +1,7 @@
 package za.ac.cput;
 
-import za.ac.cput.domain.Booking;
-import za.ac.cput.domain.Payment;
-import za.ac.cput.domain.Review;
-
-import java.time.LocalDate;
-import java.time.LocalTime;
-
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
         // Create Payment properly using Builder
@@ -41,5 +36,4 @@ public class Main {
         System.out.println(review);
 
     }
-
 }
