@@ -1,70 +1,73 @@
 package za.ac.cput.domain;
 
 public class RentalAgent {
+    private String agentId;
+    private String name;
+    private String email;
+    private String phoneNumber;
 
-  private String agentID;
-  private String firstName;
-  private String lastName;
-  private String email;
-  private String phoneNumber;
-  private String branch;
+    private RentalAgent(Builder builder) {
+        this.agentId = builder.agentId;
+        this.name = builder.name;
+        this.email = builder.email;
+        this.phoneNumber = builder.phoneNumber;
+    }
 
-  public RentalAgent(String agentId, String firstName, String lastName, String email, String phoneNumber, String branch) {
-    this.agentId = agentId;
-    this.firstname = firstname;
-    this.lastName = lastName;
-    this.email = email;
-    this.phoneNumber = phoneNumber;
-    this.branch = branch;
-  }
+    public String getAgentId() {
+        return agentId;
+    }
 
-  public String getAgentId() {
-    return agentId;
-    
-  }
-  public void setAgentId(String agentId) {
-    this.agentId = agentId;
-  }
-  public String getFirstName() {
-    return firstName;
-  }
-  public void setFirstName(String firstName) {
-    this.firstName = firstName;
-    
-  }
-  public String getLastName() {
-    return lastName;
-  }
-  public void setLastName(String lastName) {
-    this.lastName = lastName;
-  }
+    public String getName() {
+        return name;
+    }
 
-  public String getEmail() {
-    return email;
-  }
-  public void setEmail(String email) {
-    this.email = email;
-  }
-  public void setPhoneNumber(String phoneNumber) {
-    this.phoneNumber = phoneNumber;
-  }
-  public String getBranch() {
-    return branch;
-  }
-  public void setBranch(String branch) {
-    this.branch = branch;
-  }
+    public String getEmail() {
+        return email;
+    }
 
-  @override
-  public String toString() {
-    return "RentalAgent{" +
-           "agentId=' " + agentId + '\'' +
-           ", firstName= '" + firstName + '\'' +
-           ", lastName= '" + lastName + '\'' +
-           ", email= '" + email + '\'' +
-           ", phoneNumber= '" + phoneNumber + '\'' +
-           ", branch= '" + branch + '\'' +
-          '}';
-  }
-  
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public static class Builder {
+        private String agentId;
+        private String name;
+        private String email;
+        private String phoneNumber;
+
+        public Builder setAgentId(String agentId) {
+            this.agentId = agentId;
+            return this;
+        }
+
+        public Builder setName(String name) {
+            this.name = name;
+            return this;
+        }
+
+        public Builder setEmail(String email) {
+            this.email = email;
+            return this;
+        }
+
+        public Builder setPhoneNumber(String phoneNumber) {
+            this.phoneNumber = phoneNumber;
+            return this;
+        }
+
+        public RentalAgent build() {
+            return new RentalAgent(this);
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "RentalAgent{" +
+                "agentId='" + agentId + '\'' +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                '}';
+    }
 }
+
