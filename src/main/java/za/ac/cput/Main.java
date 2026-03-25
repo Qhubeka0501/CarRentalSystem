@@ -9,18 +9,25 @@ import java.time.LocalTime;
 
 public class Main {
     public static void main(String[] args) {
+        // Create Payment properly using Builder
+        Payment payment = new Payment.Builder()
+                .setPaymentId("P001")
+                .setAmount(5000.0)
+                .setPaymentMethod("Card")
+                .setPaymentDate("2026-03-25")
+                .build();
+
 
         Booking booking = new Booking.Builder()
                 .setBookingId("B001")
                 .setCustomerId("OP323381")
                 .setCarId("CAA2345GP")
                 .setDate(LocalDate.now())
-                .setStartTime(LocalTime.of(8, 00))
-                .setEndTime(LocalTime.of(17, 00))
+                .setStartTime(LocalTime.of(8, 0))
+                .setEndTime(LocalTime.of(17, 0))
                 .setPrice(5000.0)
-                .setPayment(new Payment())
+                .setPayment(payment)
                 .build();
-
 
         Review review = new Review.Builder()
                 .setReviewId("R051")
